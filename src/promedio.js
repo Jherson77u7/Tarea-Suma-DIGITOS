@@ -5,13 +5,13 @@ function promedio(cant) {
     let contador = cant.length;
   
     for (let i = 0; i < cant.length; i++) {
-      totalAcumulado = cant[i];
+      totalAcumulado += cant[i];
 
   
     }
-  
-     let total=totalAcumulado ;
-     return total;
+     let resultado =totalAcumulado;
+     return resultado ;
+
    
   }
   export default promedio ;
