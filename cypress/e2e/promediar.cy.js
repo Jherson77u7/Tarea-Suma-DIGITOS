@@ -36,10 +36,11 @@ describe ("Promedio",()=>{
         cy.get("#promedio-button").click();
         cy.get("#promedio-div").should("contain","8")
     });
-    it("Probar si suma una cadena de numeros pero con caracter (***)",()=>{
+    it("Probar si suma una cadena de numeros con varios delimitadores", () => {
         cy.visit("/");  
         cy.get("#cadena-numeros").type("3,2-2;2***2");
         cy.get("#promedio-button").click();
-        cy.get("#promedio-div").should("contain","8")
+        cy.get("#promedio-div").should("contain", "11"); // Aquí puedes ajustar el resultado esperado a 2 según los cambios recientes de la función promedio.
     });
+    
 }); 

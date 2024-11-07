@@ -1,3 +1,4 @@
+// Importa las funciones necesarias
 import sumar from "./sumador.js";
 import restador from "./restar.js";
 import promedio from "./promedio.js";
@@ -40,13 +41,18 @@ const promDiv = document.querySelector("#promedio-div");
 promForm.addEventListener("submit", (event) => {
   event.preventDefault();
 
-  // Obtiene la cadena de números ingresada y convierte a array
-  const cadena = cadenaNumerosInput.value;
-  const numeros = cadena.split(/[,;/-]+/).map(num => Number.parseFloat(num.trim()));
-  
+  // Obtiene la cadena de números ingresada
+  let cadena = cadenaNumerosInput.value;
+
+  // Define los delimitadores permitidos para la calculadora
+  const delimitador = /[,\-;/\*]+/;
+
+  // Convierte la cadena en un array usando los delimitadores
+  const numeros = cadena.split(delimitador).map(num => Number.parseFloat(num.trim()));
+
   // Verifica si todos los valores son números válidos
   if (numeros.some(isNaN)) {
-    promDiv.innerHTML = "<p>Por favor, ingrese solo números separados por comas.</p>";
+    promDiv.innerHTML = "<p>Por favor, ingrese solo números separados correctamente.</p>";
   } else {
     // Calcula el promedio
     const resultadoPromedio = promedio(numeros);
