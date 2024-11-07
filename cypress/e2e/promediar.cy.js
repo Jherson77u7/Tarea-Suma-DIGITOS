@@ -10,7 +10,7 @@ describe ("Promedio",()=>{
         cy.visit("/");
         cy.get("#cadena-numeros").type("0");
         cy.get("#promedio-button").click();
-        cy.get("promedio-div").should("contain","0");
+        cy.get("#promedio-div").should("contain","0");
     });
    
 });
