@@ -19,12 +19,12 @@ function promedio(cant) {
     let contador = cant.length;
   
     for (let i = 0; i < cant.length; i++) {
-      totalAcumulado = cant[i];
-      
+      totalAcumulado += cant[i];
+
     }
   
-    let resultadoPromedio = totalAcumulado ;
-    return resultadoPromedio;
+    let resultadoSumaDigitos = totalAcumulado ;
+    return resultadoSumaDigitos;
   }
   export default promedio ;
     
