@@ -6,8 +6,8 @@ function promedio(cant) {
 
     // let contador =0;
   
-     
-    return 0;
+     totalAcumulado=cant;
+    
    
   }
   export default promedio ;
