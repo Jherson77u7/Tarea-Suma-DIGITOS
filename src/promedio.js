@@ -9,8 +9,8 @@ function promedio(cant) {
 
   
     }
-     let resultado =totalAcumulado;
-     return resultado ;
+   
+     return totalAcumulado ;
 
    
   }
