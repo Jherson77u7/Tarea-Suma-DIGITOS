@@ -36,4 +36,10 @@ describe ("Promedio",()=>{
         cy.get("#promedio-button").click();
         cy.get("#promedio-div").should("contain","8")
     });
+    it("Probar si suma una cadena de numeros pero con caracter (***)",()=>{
+        cy.visit("/");  
+        cy.get("#cadena-numeros").type("3,2-2;2***2");
+        cy.get("#promedio-button").click();
+        cy.get("#promedio-div").should("contain","8")
+    });
 }); 
