@@ -42,8 +42,8 @@ promForm.addEventListener("submit", (event) => {
 
   // Obtiene la cadena de números ingresada y convierte a array
   const cadena = cadenaNumerosInput.value;
-  const numeros = cadena.split(/[,/-]+/).map(num => Number.parseFloat(num.trim()));
-
+  const numeros = cadena.split(/[,;/-]+/).map(num => Number.parseFloat(num.trim()));
+  
   // Verifica si todos los valores son números válidos
   if (numeros.some(isNaN)) {
     promDiv.innerHTML = "<p>Por favor, ingrese solo números separados por comas.</p>";
