@@ -8,10 +8,9 @@ function promedio(cant) {
       
 
       if (cant[i]<=numeroMaximo)
-      {
         totalAcumulado += cant[i];
         contador++;
-      }
+      
     
       
 
