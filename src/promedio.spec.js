@@ -10,7 +10,7 @@ describe ("Promedio",()=>{
     });
   
     it ("Numero suma solo numeros menores a 1000",()=>{
-        expect (promedio([1001,20.1004,20])).toEqual(40);
+        expect (promedio([1001,20,1004,20])).toEqual(40);
 
     });
 
