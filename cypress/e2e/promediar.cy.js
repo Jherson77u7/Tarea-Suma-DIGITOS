@@ -42,5 +42,10 @@ describe ("Promedio",()=>{
         cy.get("#promedio-button").click();
         cy.get("#promedio-div").should("contain", "11"); // Aquí puedes ajustar el resultado esperado a 2 según los cambios recientes de la función promedio.
     });
-    
+    it("Probar si suma varios numeros pero que solo sean menores de 1000", () => {
+        cy.visit("/");  
+        cy.get("#cadena-numeros").type("1001,2-2;1002,1004");
+        cy.get("#promedio-button").click();
+        cy.get("#promedio-div").should("contain", "4"); 
+    });
 }); 

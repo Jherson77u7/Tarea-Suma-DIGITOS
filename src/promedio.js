@@ -7,11 +7,14 @@ function promedio(cant) {
     for (let i = 0; i < cant.length; i++) {
       totalAcumulado += cant[i];
 
+      if (cant[i]<=numeroMaximo)
+      {
+        totalAcumulado += cant[i];
+      }
   
     }
-     let resultado =totalAcumulado;
-     return resultado ;
-
+  
+    return totalAcumulado ;
    
   }
   export default promedio ;
