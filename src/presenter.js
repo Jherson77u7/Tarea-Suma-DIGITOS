@@ -33,7 +33,6 @@ restForm.addEventListener("submit", (event) => {
   restDiv.innerHTML = "<p>Resultado de la resta: " + restador(firstNumber, secondNumber) + "</p>";
 });
 
-// Elementos para calcular el promedio de una cadena de números
 const cadenaNumerosInput = document.querySelector("#cadena-numeros");
 const promForm = document.querySelector("#promedio-form");
 const promDiv = document.querySelector("#promedio-div");
@@ -41,16 +40,12 @@ const promDiv = document.querySelector("#promedio-div");
 promForm.addEventListener("submit", (event) => {
   event.preventDefault();
 
-  // Obtiene la cadena de números ingresada
   let cadena = cadenaNumerosInput.value;
 
-  // Define los delimitadores permitidos para la calculadora
   const delimitador = /[,\-;/\*]+/;
 
-  // Convierte la cadena en un array usando los delimitadores
   const numeros = cadena.split(delimitador).map(num => Number.parseFloat(num.trim()));
 
-  // Verifica si todos los valores son números válidos
   if (numeros.some(isNaN)) {
     promDiv.innerHTML = "<p>Por favor, ingrese solo números separados correctamente.</p>";
   } else {
